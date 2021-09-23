@@ -38,15 +38,11 @@ Namespace Solution3.Module.Web.Controllers
 			Dim script As String = holder.CallbackManager.GetScript()
 			script = String.Format(CultureInfo.InvariantCulture, "" & ControlChars.CrLf & _
 "                function(s, e) {{" & ControlChars.CrLf & _
-"                    if(e.isChangedOnServer){{" & ControlChars.CrLf & _
+"                    var xafCallback = function() {{" & ControlChars.CrLf & _
+"                        s.EndCallback.RemoveHandler(xafCallback);" & ControlChars.CrLf & _
 "                        {0}" & ControlChars.CrLf & _
-"                    }}else{{" & ControlChars.CrLf & _
-"                        var xafCallback = function() {{" & ControlChars.CrLf & _
-"                            s.EndCallback.RemoveHandler(xafCallback);" & ControlChars.CrLf & _
-"                            {0}" & ControlChars.CrLf & _
-"                        }}" & ControlChars.CrLf & _
-"                        s.EndCallback.AddHandler(xafCallback);" & ControlChars.CrLf & _
 "                    }};" & ControlChars.CrLf & _
+"                    s.EndCallback.AddHandler(xafCallback);" & ControlChars.CrLf & _
 "                }}" & ControlChars.CrLf & _
 "                ", script)
 			ClientSideEventsHelper.AssignClientHandlerSafe(editor.Grid, "SelectionChanged", script, "DashboardRefreshController")

@@ -27,13 +27,17 @@ namespace Solution3.Module.Web.Controllers {
             ICallbackManagerHolder holder = (ICallbackManagerHolder)WebWindow.CurrentRequestPage;
             string script = holder.CallbackManager.GetScript();
             script = string.Format(CultureInfo.InvariantCulture, @"
-                function(s, e) {{
-                    var xafCallback = function() {{
-                        s.EndCallback.RemoveHandler(xafCallback);
-                        {0}
-                    }};
-                    s.EndCallback.AddHandler(xafCallback);
-                }}
+function(s, e) {{
+    if(e.isChangedOnServer){{
+        {0}
+    }}else{{
+        var xafCallback = function() {{
+            s.EndCallback.RemoveHandler(xafCallback);
+            {0}
+        }};
+        s.EndCallback.AddHandler(xafCallback);
+    }}
+}}
                 ", script);
             ClientSideEventsHelper.AssignClientHandlerSafe(editor.Grid, "SelectionChanged", script, "DashboardRefreshController");
         }

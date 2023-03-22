@@ -5,7 +5,7 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using DevExpress.ExpressApp.Editors;
 using DevExpress.ExpressApp.SystemModule;
-
+using dxTestSolution.Module.BusinessObjects;
 
 namespace Solution3.Module.Controllers {
     // For more typical usage scenarios, be sure to check out http://documentation.devexpress.com/#Xaf/clsDevExpressExpressAppViewControllertopic.
@@ -22,7 +22,7 @@ namespace Solution3.Module.Controllers {
                 searchedObjects.Add(detailListView.ObjectSpace.GetKeyValue(obj));
             }
             if(searchedObjects.Count > 0) {
-                detailListView.CollectionSource.Criteria[CriteriaName] = new InOperator("AssignedTo.Oid", searchedObjects);
+                detailListView.CollectionSource.Criteria[CriteriaName] = CriteriaOperator.FromLambda<MyTask>(x => searchedObjects.Contains(x.AssignedTo.Oid));
             }
         }
         private void SourceItem_ControlCreated(object sender, EventArgs e) {

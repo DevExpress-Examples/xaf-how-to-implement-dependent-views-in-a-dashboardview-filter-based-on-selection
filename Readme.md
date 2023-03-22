@@ -12,9 +12,12 @@
 
 This example illustrates how to filter a ListView displayed in a DashboardView based on another ListView's selection.
 
-###Scenario
+### Scenario
 
 When a [DashboardView](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.DashboardView) contains several list views, it is often required to make them dependent, e.g. display items of one ListView based on items or selection of another ListView.
+
+![chrome_WHVRxufQHv](https://user-images.githubusercontent.com/14300209/226880445-1db093ce-416a-40e9-874a-13b931005242.gif)
+
 
 Steps to implement
 1. Add a new ViewController to your platform-agnostic module (DashboardFilterController).

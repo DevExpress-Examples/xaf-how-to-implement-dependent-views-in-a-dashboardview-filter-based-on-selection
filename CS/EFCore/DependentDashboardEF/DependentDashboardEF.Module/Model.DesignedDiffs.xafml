@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" ?>
+<Application Title="DependentDashboardEF">
+   <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="@ea9dab4c-b318-4ac5-9ca3-11a1bae734bb" ViewId="MyDashboardView" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="22.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DashboardView Id="MyDashboardView" IsNewNode="True">
+      <Items IsNewNode="True">
+        <DashboardViewItem Id="ContactView" ViewId="Contact_ListView" Caption="Contact" IsNewNode="True" />
+        <DashboardViewItem Id="MyTaskView" ViewId="MyTask_ListView" Caption="MyTask" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" IsNewNode="True">
+          <LayoutItem Id="Contact" ViewItem="ContactView" Index="0" IsNewNode="True" />
+          <LayoutItem Id="MyTask" ViewItem="MyTaskView" Index="1" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+  </Views>
+</Application>

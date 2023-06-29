@@ -3,12 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependentDashboard.Blazor.Server", "DependentDashboard.Blazor.Server\DependentDashboard.Blazor.Server.csproj", "{ECD2EC0B-0D51-497A-95DE-FDEBA1B2ABFC}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependentDashboard.Module", "DependentDashboard.Module\DependentDashboard.Module.csproj", "{D537FFB7-397D-40C7-A8BF-2FA23C2E22C2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependentDashboard.Win", "DependentDashboard.Win\DependentDashboard.Win.csproj", "{4D3A34DA-115B-493B-8145-5E089957391B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependentDashboard.Blazor.Server", "DependentDashboard.Blazor.Server\DependentDashboard.Blazor.Server.csproj", "{ECD2EC0B-0D51-497A-95DE-FDEBA1B2ABFC}"
-EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

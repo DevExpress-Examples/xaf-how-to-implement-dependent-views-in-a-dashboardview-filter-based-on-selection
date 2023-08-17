@@ -25,6 +25,7 @@ When a [DashboardView](https://docs.devexpress.com/eXpressAppFramework/DevExpres
 - [DashboardFilterController.cs](./CS/EFCore/DependentDashboardEF/DependentDashboardEF.Module/Controllers/DashboardFilterController.cs) 
 
 ## Documentation
+
 - [Display Multiple Views Side-by-Side (Dashboard View)](https://docs.devexpress.com/eXpressAppFramework/113296/ui-construction/views/layout/display-several-views-side-by-side)
 - [DashboardView](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.DashboardView)
 

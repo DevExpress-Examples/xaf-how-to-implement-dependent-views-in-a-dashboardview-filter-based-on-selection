@@ -15,7 +15,7 @@ When a [DashboardView](https://docs.devexpress.com/eXpressAppFramework/DevExpres
 
 
 ## Implementation Details
-1. Add a new [ViewController](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ViewController) to your platform-agnostic module ([DashboardFilterController.cs](./CS/EFCore/DependentDashboardEF/DependentDashboardEF.Module/Controllers/DashboardFilterController.cs) ).
+1. Add a new [ViewController](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ViewController) to the **YourSolutionName.Module** project. For more information, refer to the following file: [DashboardFilterController.cs](./CS/EFCore/DependentDashboardEF/DependentDashboardEF.Module/Controllers/DashboardFilterController.cs)).
 2. Access the target and source views.
 3. Handle the source view's list view selection changed event.
 4. Filter the target view in the event handler.

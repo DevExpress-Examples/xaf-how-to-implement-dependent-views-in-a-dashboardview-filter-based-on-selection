@@ -18,7 +18,7 @@ When a [DashboardView](https://docs.devexpress.com/eXpressAppFramework/DevExpres
 2. In the `OnActivated` method, retrieve `DashboardViewItems` via the `FindItem` method. Also, subscribe to the `ControlCreated` event of a `DashboardViewItem` whose `ListView` is used to filter data (hereinafter referred to as `SourceView`).
 4. In the `ControlCreated` event handler retrieve the `SourceView` via the [DashboardViewItem.InnerView](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Editors.DashboardViewItem.InnerView?p=netframework) property and subscribe to its [SelectionChanged](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.View.SelectionChanged?p=netframework) event.
 5. In the `SelectionChanged` event handler, retrieve the View to be filtered (hereinafter referred to as `TargetView`) in the same manner as in the previous step.
-6. To get an object to filter on, use the [ListView.CurrentObject](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ListView.CurrentObject?p=netframework) property. This object must be loaded from `SourceView` Object Space to `TargetView` Object Space via the `GetObject` method.
+6. To get an object to filter on, use the [ListView.CurrentObject](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ListView.CurrentObject?p=netframework) property. 
 7. Now you can add `CriteriaOperator` to the [TargetView.CollectionSource.Criteria](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.CollectionSourceBase.Criteria?p=netframework) dictionary to filter the `TargetView`. In this example, we created a `InOperator` to filter the **Position** column via objects from `SourceView`.
 
 ## Files to Review

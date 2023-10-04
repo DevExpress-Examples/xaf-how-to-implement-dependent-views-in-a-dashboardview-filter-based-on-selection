@@ -18,17 +18,17 @@ namespace Solution3.Module.Controllers {
         private void FilterDetailListView(ListView masterListView, ListView detailListView) {
             detailListView.CollectionSource.Criteria.Clear();
             List<object> searchedObjects = new List<object>();
-            foreach(object obj in masterListView.SelectedObjects) {
+            foreach (object obj in masterListView.SelectedObjects) {
                 searchedObjects.Add(detailListView.ObjectSpace.GetKeyValue(obj));
             }
-            if(searchedObjects.Count > 0) {
+            if (searchedObjects.Count > 0) {
                 detailListView.CollectionSource.Criteria[CriteriaName] = CriteriaOperator.FromLambda<MyTask>(x => searchedObjects.Contains(x.AssignedTo.ID));
             }
         }
         private void SourceItem_ControlCreated(object sender, EventArgs e) {
             DashboardViewItem dashboardItem = (DashboardViewItem)sender;
             ListView innerListView = dashboardItem.InnerView as ListView;
-            if(innerListView != null) {
+            if (innerListView != null) {
                 innerListView.SelectionChanged -= innerListView_SelectionChanged;
                 innerListView.SelectionChanged += innerListView_SelectionChanged;
             }
@@ -38,31 +38,32 @@ namespace Solution3.Module.Controllers {
         }
         private void DisableNavigationActions(Frame frame) {
             RecordsNavigationController recordsNavigationController = frame.GetController<RecordsNavigationController>();
-            if (recordsNavigationController != null){
+            if (recordsNavigationController != null) {
                 recordsNavigationController.Active.SetItemValue("DashboardFiltering", false);
             }
         }
 
         protected override void OnActivated() {
             base.OnActivated();
-            if(View.Id == DashboardViewId) {
+            if (View.Id == DashboardViewId) {
                 SourceItem = (DashboardViewItem)View.FindItem(FilterSourceID);
                 TargetItem = (DashboardViewItem)View.FindItem(FilterTargetId);
-                if(SourceItem != null) {
+                if (SourceItem != null) {
                     SourceItem.ControlCreated += SourceItem_ControlCreated;
                 }
-                if (TargetItem!=null)
-                if (TargetItem.Frame!=null)
-                    DisableNavigationActions(TargetItem.Frame);
-                else
-                    TargetItem.ControlCreated += (s, e) =>
-                    {
+                if (TargetItem != null) {
+                    if (TargetItem.Frame != null) {
                         DisableNavigationActions(TargetItem.Frame);
-                    };
+                    } else {
+                        TargetItem.ControlCreated += (s, e) => {
+                            DisableNavigationActions(TargetItem.Frame);
+                        };
+                    }
+                }
             }
         }
         protected override void OnDeactivated() {
-            if(SourceItem != null) {
+            if (SourceItem != null) {
                 SourceItem.ControlCreated -= SourceItem_ControlCreated;
                 SourceItem = null;
             }

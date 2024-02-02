@@ -31,3 +31,6 @@ When a [DashboardView](https://docs.devexpress.com/eXpressAppFramework/DevExpres
 - [Display Multiple Views Side-by-Side (Dashboard View)](https://docs.devexpress.com/eXpressAppFramework/113296/ui-construction/views/layout/display-several-views-side-by-side)
 - [DashboardView](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.DashboardView)
 
+## ASP.NET WebForms Version
+
+You can find the ASP.NET WebForms version of this example in the following branch: <a href="https://github.com/DevExpress-Examples/xaf-how-to-implement-dependent-views-in-a-dashboardview-filter-based-on-selection/tree/17.2.3%2B">DevExpress-Examples/xaf-how-to-implement-dependent-views-in-a-dashboardview-filter-based-on-selection at 17.2.3+</a>

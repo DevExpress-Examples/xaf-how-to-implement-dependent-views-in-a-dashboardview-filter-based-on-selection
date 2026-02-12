@@ -36,7 +36,7 @@ When a [DashboardView](https://docs.devexpress.com/eXpressAppFramework/DevExpres
 
 You can find the ASP.NET WebForms version of this example in the following branch: <a href="https://github.com/DevExpress-Examples/xaf-how-to-implement-dependent-views-in-a-dashboardview-filter-based-on-selection/tree/17.2.3%2B">DevExpress-Examples/xaf-how-to-implement-dependent-views-in-a-dashboardview-filter-based-on-selection at 17.2.3+</a>
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-how-to-implement-dependent-views-in-a-dashboardview-filter-based-on-selection&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-how-to-implement-dependent-views-in-a-dashboardview-filter-based-on-selection&~~~was_helpful=no)
 

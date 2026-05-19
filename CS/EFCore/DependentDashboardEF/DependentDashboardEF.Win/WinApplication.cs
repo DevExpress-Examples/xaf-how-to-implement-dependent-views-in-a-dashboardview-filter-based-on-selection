@@ -18,7 +18,6 @@ public class DependentDashboardEFWindowsFormsApplication : WinApplication {
 		SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
         ApplicationName = "DependentDashboardEF";
         CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
-        UseOldTemplates = false;
         DatabaseVersionMismatch += DependentDashboardEFWindowsFormsApplication_DatabaseVersionMismatch;
         CustomizeLanguagesList += DependentDashboardEFWindowsFormsApplication_CustomizeLanguagesList;
     }
